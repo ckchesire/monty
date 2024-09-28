@@ -15,15 +15,15 @@ void pop(stack_t **stack, unsigned int line_number)
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-	delete_stack_node();
+	remove_stack_node();
 	global_args->stack_length -= 1;
 }
 
 /**
- * delete_stack_node - function deletes node at the top of stack
+ * remove_stack_node - function deletes node at the top of stack
  * Return: nothing
  */
-void delete_stack_node(void)
+void remove_stack_node(void)
 {
 	stack_t *temp;
 

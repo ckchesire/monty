@@ -82,7 +82,7 @@ void run_instruction(void);
 int is_number(char *str);
 void free_all(void);
 void free_stack(stack_t *head);
-void delete_stack_node(void);
+void remove_stack_node(void);
 
 void push(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
