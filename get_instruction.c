@@ -9,9 +9,8 @@ void get_instruction(void)
 	instruction_t instructions[] = {
 		{"push", &push}, {"pall", &pall},
 		{"pint", &pint}, {"pop", &pop},
-		{"swap", &swap},
-	       /*
-		* {"add", &add},
+		{"swap", &swap},{"add", &add},
+		/*
 		* {"nop", &nop}, {"sub", &sub},
 		* {"div", &_div}, {"mul", &mul},
 		* {"rotl", &rotl}, {"rotr", &rotr},

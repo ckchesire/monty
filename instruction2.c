@@ -60,3 +60,31 @@ void swap(stack_t **stack, unsigned int line_number)
 	temp2->prev = NULL;
 	global_args->head = temp2;
 }
+
+/**
+ * add - function adds the top a 2 elements of the stack
+ * @stack: refers to the pointer to the stack
+ * @line_number: line no. where the add function is called
+ * Return: returns nothing
+ */
+void add(stack_t **stack, unsigned int line_number)
+{
+	stack_t *temp1, *temp2;
+
+	(void)stack;
+
+	if (global_args->stack_length < 2)
+	{
+		dprintf(2, "L%d: can't add, stack too short\n", line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+
+	temp1 = global_args->head;
+	temp2 = temp1->next;
+
+	temp2->n = temp1->n + temp2->n;
+	remove_stack_node();
+
+	global_args->stack_length -= 1;
+}
