@@ -10,7 +10,7 @@ void push(stack_t **stack, unsigned int line_number)
 	if (global_args->n_tokens <= 1 || !(is_number(global_args->tokens[1])))
 	{
 		free_args();
-		dprintf(2, "L%d: Usage: push integer\n", line_number);
+		dprintf(2, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	*stack = malloc(sizeof(stack_t));
