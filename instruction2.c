@@ -88,3 +88,15 @@ void add(stack_t **stack, unsigned int line_number)
 
 	global_args->stack_length -= 1;
 }
+
+/**
+ * nop - function does not do anything
+ * @stack: refers to the pointer to the stack
+ * @line_number: line no. where the add function is called
+ * Return: returns nothing
+ */
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void) stack;
+	(void) line_number;
+}
