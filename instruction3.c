@@ -75,7 +75,14 @@ void _div(stack_t **stack, unsigned int line_number)
 	temp1 = global_args->head;
 	temp2 = temp1->next;
 
-	temp2->n = temp1->n / temp2->n;
+	if (temp1->n == 0)
+	{
+		dprintf(2, "L%d: division by zero\n", line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+
+	temp2->n = temp2->n / temp1->n;
 	remove_stack_node();
 
 	global_args->stack_length -= 1;
