@@ -9,7 +9,7 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	if (global_args->n_tokens <= 1 || !(is_number(global_args->tokens[1])))
 	{
-		free_args();
+		free_all();
 		dprintf(2, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
@@ -65,7 +65,7 @@ void pint(stack_t **stack, unsigned int line_number)
 	(void) stack;
 	if (global_args->head == NULL)
 	{
-		dprintf(2, "L%d:: can't pint, stack empty\n", line_number);
+		dprintf(2, "L%d: can't pint, stack empty\n", line_number);
 		free_all();
 		exit(EXIT_FAILURE);
 	}

@@ -46,9 +46,11 @@ void free_args(void)
 		free(global_args->instruction);
 		global_args->instruction = NULL;
 	}
+
 	if (global_args->head)
 		free_stack(global_args->head);
 	global_args->head = NULL;
+
 	if (global_args->f_line)
 	{
 		free(global_args->f_line);
@@ -66,6 +68,7 @@ void free_stack(stack_t *head)
 {
 	if (head == NULL)
 		return;
+
 	if (head->next != NULL)
 	{
 		free_stack(head->next);
