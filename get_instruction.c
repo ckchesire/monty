@@ -10,14 +10,13 @@ void get_instruction(void)
 		{"push", &push}, {"pall", &pall},
 		{"pint", &pint}, {"pop", &pop},
 		{"swap", &swap}, {"add", &add},
-		{"nop", &nop},
+		{"nop", &nop}, {"sub", &sub},
+		{"div", &_div}, {"mul", &mul},
+		{"mod", &mod},
 		/*
-		* {"sub", &sub},
-		* {"div", &_div}, {"mul", &mul},
 		* {"rotl", &rotl}, {"rotr", &rotr},
 		* {"stack", &stack}, {"queue", &queue},
 		* {"pstr", &pstr}, {"pchar", &pchar},
-		* {"mod", &mod},
 		*/
 		{NULL, NULL}
 	};
