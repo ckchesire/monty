@@ -101,7 +101,7 @@ void mod(stack_t **stack, unsigned int line_number)
 
 	if (global_args->stack_length < 2)
 	{
-		dprintf(2, "L%d: can't add, stack too short\n", line_number);
+		dprintf(2, "L%d: can't mod, stack too short\n", line_number);
 		free_all();
 		exit(EXIT_FAILURE);
 	}
